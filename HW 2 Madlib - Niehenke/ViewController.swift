@@ -11,7 +11,7 @@ import UIKit
 class ViewController: UIViewController {
 
   
-    
+    // collect info
     
     @IBOutlet weak var nounOne: UITextField!
     @IBOutlet weak var nounTwo: UITextField!
@@ -22,9 +22,11 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var output: UITextView!
     
+    // push button to input the text
     
     @IBAction func activate(_ sender: Any) {
         
+        // Output text to madlib
         output.text = "The " + adjective.text! + " " + nounOne.text! + " may " + verb.text! + " on the lake but my " + adjectiveTwo.text! + " " + nounTwo.text! + " owns the lake."
         
         
@@ -34,6 +36,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        // Close keyboard with tap
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
         view.addGestureRecognizer(tap)
     }
